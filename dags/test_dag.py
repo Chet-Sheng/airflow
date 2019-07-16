@@ -14,7 +14,7 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
-dag = DAG('tutoriall', default_args=default_args, schedule_interval=timedelta(days=1))
+dag = DAG('tutorial', default_args=default_args, schedule_interval=timedelta(days=1))
 
 # t1, t2 and t3 are examples of tasks created by instantiating operators
 t1 = BashOperator(
