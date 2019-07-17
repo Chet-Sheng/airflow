@@ -7,6 +7,10 @@ verify_ssl = true
 
 [packages]
 apache-airflow = "*"
+google-api-python-client = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
