@@ -6,11 +6,21 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-apache-airflow = "*"
+apache-airflow = {extras = ["all"],version = "==1.9.0"}
+apache-beam = "*"
 google-api-python-client = "*"
+google-cloud-bigquery = "*"
+mysqlclient = "*"
+oauth2client = "*"
+pandas = "==0.19.0"
+pandas-gbq = "*"
+httplib2 = "*"
+requests = "*"
+pysftp = "*"
+setuptools = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "2.7"
 
 [pipenv]
 allow_prereleases = true

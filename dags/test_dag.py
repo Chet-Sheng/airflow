@@ -2,6 +2,8 @@ from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from datetime import datetime, timedelta
 
+var1 = {'k': 'value3'}
+var2 = 10
 
 default_args = {
     'owner': 'airflow',
@@ -42,5 +44,12 @@ t3 = BashOperator(
     params={'my_param': 'Parameter I passed in'},
     dag=dag)
 
+t4 = BashOperator(
+    task_id='print_variables',
+    bash_command='echo {{var.json.var3}}',
+    retries=3,
+    dag=dag)
+
 t2.set_upstream(t1)
 t3.set_upstream(t1)
+t4.set_upstream(t1)
